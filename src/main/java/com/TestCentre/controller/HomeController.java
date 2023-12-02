@@ -59,7 +59,7 @@ public class HomeController {
 		
 		session.setAttribute("msg", "Image Uploaded Sucessfully");
 
-		return "redirect:/";
+		return "redirect:/imageUpload";
 	}
 	
 	
