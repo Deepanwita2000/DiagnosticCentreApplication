@@ -60,6 +60,18 @@ input[type="text"] {
     
 }
 
+select[type="text"] {
+    width: 150%;
+    
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-weight:bold;
+    color:rgb(117, 117, 117);
+    
+}
+
 h2 {
     text-align: center;
     color: rgb(30, 30, 98);
@@ -117,10 +129,29 @@ h2 {
 				<input type="text" class="form-control" name="doctor" th:value="${test.doctor}">
 			</div>
 			
-			<div class="mb-3">
+			<!--<div class="mb-3">
 				<label for="Test" class="form-label">Test</label>
 				<input type="text" class="form-control" name="test" th:value="${test.test}">
-			</div>
+			</div>-->
+			
+				<!---->
+                  <div class="mb-3">
+                <label for="test" class="form-label"><h5>Test</h5></label>
+                    <select type="text" class="form-control" name="test">
+                        <option>Select</option>
+                        <option>Blood test</option>
+                        <option>Biopsy</option>
+                        <option>Imaging test</option>
+                        <option>Stool test</option>
+                        <option>MRI</option>
+                        <option>Sugar test</option>
+                        <option>Thyroid</option>
+                        <option>Vitamin test</option>
+                        <option>X-Ray</option>
+                    </select>
+            </div>
+			<!---->
+			
 			<center><button type="submit" class="btn btn-primary">Submit</button></center>
 		</form>
 
