@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en" xmlns:th="https://www.thymeleaf.com">
 
@@ -59,6 +58,18 @@ input[type="text"] {
     font-weight:bold;
     
 }
+
+select[type="text"] {
+    width: 150%;
+    
+    padding: 10px;
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-weight:bold;
+    color:rgb(117, 117, 117);
+    
+}
 h2 {
     text-align: center;
     color: rgb(30, 30, 98);
@@ -74,34 +85,6 @@ h2 {
 	<br>
 	<br>
 	<!--nav bar-->
-	<!--<nav class="navbar navbar-expand-lg navbar-light bg-dark">
-		<div class="container-fluid">
-			<a class="navbar-brand text-white" href="#">Test Centre</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-				aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-					<li class="nav-item">
-						<a class="nav-link active text-white" aria-current="page" href="/">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link text-white" href="available_tests">Available Tests</a>
-					</li>
-
-					<li class="nav-item">
-						<a class="nav-link text-white" href="my_tests">My Tests</a>
-					</li>
-				</ul>
-				<div>
-					<a class="nav-link text-white" href="test_register">New Register</a>
-				</div>
-			</div>
-		</div>
-	</nav>-->
-
 	<div class="container my-5 p-5" style="border:1px solid black;">
 		<h2 class="text-center">Register</h2>
 		<form class="col-md-4 offset-md-4" th:action="@{/save}" method="post">
@@ -116,10 +99,32 @@ h2 {
 				<input type="text" class="form-control" name="doctor" placeholder="Enter doctor name">
 			</div>
 			
-			<div class="mb-3">
+			<!--<div class="mb-3">
 				<label for="Test" class="form-label"><h5>Test</h5></label>
 				<input type="text" class="form-control" name="test" placeholder="Enter test name">
-			</div>
+			</div>-->
+			
+			<!---->
+                  <div class="mb-3">
+                <label for="test" class="form-label"><h5>Test</h5></label>
+                    <select type="text" class="form-control" name="test">
+                        <option>Select</option>
+                        <option>Blood test</option>
+                        <option>Biopsy</option>
+                        <option>Imaging test</option>
+                        <option>Stool test</option>
+                        <option>MRI</option>
+                        <option>Sugar test</option>
+                        <option>Thyroid</option>
+                        <option>Vitamin test</option>
+                        <option>X-Ray</option>
+                    </select>
+            </div>
+			<!---->
+			
+			
+			
+			
 			<center><button type="submit" class="btn btn-primary">Submit</button></center>
 		</form>
 
